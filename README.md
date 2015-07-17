@@ -1,2 +1,2 @@
 # proxivelo
-Pub à vélo  utilisant Ionic PhoneGap et le plugin cordova.background.geolocation 
+Application mobile de tracage GPS  utilisant PhoneGap , Ionic  et le plugin cordova.background.geolocation 
