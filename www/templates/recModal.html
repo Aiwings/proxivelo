@@ -1,0 +1,23 @@
+﻿<ion-modal-view class="popup" ng-controller="recPopupCtrl">
+   <ion-content>
+       <form ng-submit="choisir()">
+            <div class="list">
+                <h1>Choix</h1>
+                <p>Veuillez choisir votre vélo et nommer votre parcours </p>
+                <div class="item item-input item-select">
+                    <div class="input-label">Vélo</div>
+                    <select ng-model="popup.velo"> 
+                        <option selected value="velo1">Velo 1</option>
+                        <option value="velo2">Velo 2</option>
+                    </select>
+                </div>
+                <label class="item item-input">
+                    <input type="text" placeholder="parcours" ng-model="popup.parcours" />
+                </label>
+                 <label class="item">
+                    <button class="button button-block button-positive" type="submit">Continuer</button>
+                 </label>           
+             </div>
+       </form>
+   </ion-content>
+</ion-modal-view>
