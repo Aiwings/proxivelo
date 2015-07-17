@@ -1,0 +1,24 @@
+<ion-view view-title="Choix" class="choix">
+	<ion-content>
+		<img class="logo" src="img/logo.jpg">
+		<div class="consigne">
+			<p>Veuillez choisir le mode de l'Application</p>
+		</div>
+		<form ng-submit="choisi()">
+			<div class="list">
+				<div class="item item-input item-select">
+					<div class="input-label">
+						Mode
+					</div>
+					<select ng-model="app.option">
+					  <option selected>Suivi</option>
+					  <option>Enregistrement</option>
+					</select>
+				</div>
+				<label class="item">
+					<button class="button button-block button-positive" type="submit">Continuer</button>
+				</label>
+			</div>			
+		</form>			
+	</ion-content>
+</ion-view>

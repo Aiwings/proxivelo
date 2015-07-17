@@ -1,0 +1,21 @@
+<ion-modal-view class="login" ng-controller="loginCtrl">
+	<ion-content>
+	<img class="logo" src="img/logo.jpg"/>
+    <form ng-submit="doLogin()">
+      <div class="list">
+		
+        <label class="item item-input">
+          <span class="input-label">Utilisateur</span>
+          <input type="text" ng-model="loginData.user"/>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Mot de passe</span>
+          <input type="password" ng-model="loginData.pw"/>
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Se Connecter</button>
+        </label>       
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

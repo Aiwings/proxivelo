@@ -1,0 +1,20 @@
+<ion-view title="Enregistrement" class="record">
+	<ion-content>
+		    
+        <div id="recMap" ng-init ="init()">
+		     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                  <ui-gmap-markers models="recMarkers" coords="'self'" icon="'icon'">
+                        <ui-gmap-windows show="show">
+                             <div ng-non-bindable>{{id}}<br />{{title}}</div>
+                         </ui-gmap-windows>
+                    </ui-gmap-markers>                
+		     </ui-gmap-google-map>
+          </div>
+            <div class="bar bar-footer bar-stable">
+			<div class="buttons">
+				<button class="button" ng-click="debut()" ng-show="debutfin">Début</button>
+				<button class="button" ng-click="fin()" ng-show="!debutfin">Fin</button>
+			</div>			
+		</div>
+	</ion-content>
+</ion-view>

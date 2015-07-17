@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap= "http://phonegap.com/ns/1.0" id="com.proxivelo.proxivelo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="fr-FR">
+  <name>Proxivelo</name>
+  <description>Tracks position </description>
+  <author href="http://guillaume-roux-creations.fr" email="roux.gensou@gmail.com">Guillaume Roux</author>
+  <content src="index.html" />
+  <access origin="*" />
+  <preference name="SplashScreen" value="screen" />
+  <preference name="windows-target-version" value="8.1" />
+  <preference name="windows-phone-target-version" value="8.1" />
+  <preference name="KeepRunning" value="True" />
+  <preference name="ShowTitle" value="False" />
+  <preference name="InAppBrowserStorageEnabled" value="True" />
+  <preference name="SuppressesIncrementalRendering" value="False" /> 
+  <icon src="icon.png" />
+
+  <platform name="android">
+    <icon src="icons/android/drawable-ldpi-icon.png" density="ldpi" />
+    <icon src="icons/android/drawable-mdpi-icon.png" density="mdpi" />
+    <icon src="icons/android/drawable-hdpi-icon.png" density="hdpi" />
+  </platform>
+  <platform name="ios">
+    <icon src="icons/ios/icon-40.png" width="40" height="40" />
+    <icon src="icons/ios/icon-50.png" width="50" height="50" />
+    <icon src="icons/ios/icon-57.png" width="57" height="57" />
+    <icon src="icons/ios/icon-60.png" width="60" height="60" />
+    <icon src="icons/ios/icon-72.png" width="72" height="72" />
+    <icon src="icons/ios/icon-76.png" width="76" height="76" />
+  </platform>
+  <gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />  
+  <gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />	
+  <gap:plugin name="org.transistorsoft.cordova.background-geolocation" version="0.3.5" />
+</widget>

@@ -1,0 +1,41 @@
+﻿<ion-view title="Suivi" class="suivi">
+	<ion-content>		    
+        <div id="suiviMap" data-tap-disabled="true">
+		     <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                    <ui-gmap-polyline  path="polyline.path" stroke="polyline.stroke" visible='polyline.visible'
+                  geodesic='polyline.geodesic' fit="true" editable="polyline.editable" draggable="polyline.draggable" ></ui-gmap-polyline>         
+                    <ui-gmap-markers models="suiviMarkers" coords="'self'" icon="'icon'">
+                        <ui-gmap-windows show="show">
+                             <div ng-non-bindable>{{id}}<br />{{title}}</div>
+                         </ui-gmap-windows>
+                    </ui-gmap-markers>               
+		     </ui-gmap-google-map>
+          </div>
+          <div class="bar bar-footer bar-stable">			
+            <div class="col col-50">
+                <div class="list">
+                    <div class="item item-input item-select">
+                        <div class="input-label">
+                            Vélo
+                        </div>
+                        <select ng-model="select.velo">
+                            <option value="velo1"  >1</option>
+                            <option value="velo2" >2</option>                              
+                         </select>
+                    </div>
+                </div>
+            </div>    
+            <div class="col col-50">
+                <div class="list">
+                    <div class="item item-input item-select">
+                       
+                        <select ng-model="select.parcours">
+                            
+                            <option ng-repeat="unit in parcours" value="{{unit.value}}">{{unit.name}}</option>                              
+                        </select>
+                    </div>
+                </div>  
+            </div>
+        </div>
+	</ion-content>
+</ion-view>
