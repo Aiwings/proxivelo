@@ -53,7 +53,7 @@ angular.module('proxivelo.controllers')
 
         var callbackFn = function (location) {
             console.log('[js] BackgroundGeoLocation callback: ' + location.latitudue + ',' + location.longitude);
-            var url = "http://velo.mfmi-lepuy.fr/pointsApp.php";
+            var url = "http://velo.mmi-lepuy.fr/pointsApp.php";
 
             var params = {
                 user:$scope.user,
