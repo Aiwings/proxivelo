@@ -154,7 +154,7 @@ angular.module('proxivelo.controllers')
         if ($scope.popup.parcours && $scope.popup.velo) {
 
             var date = getDate();
-            $rootScope.user.parcours = $scope.popup.parcours + date;
+            $rootScope.user.parcours = $scope.popup.parcours + " "+date;
             $rootScope.user.velo = $scope.popup.velo;
             $scope.modal.hide();
             console.log($scope.user);
