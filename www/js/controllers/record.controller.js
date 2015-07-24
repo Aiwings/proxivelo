@@ -53,7 +53,7 @@ angular.module('proxivelo.controllers')
 
         var callbackFn = function (location) {
             console.log('[js] BackgroundGeoLocation callback: ' + location.latitudue + ',' + location.longitude);
-            var url = "http://velo.mmi-lepuy.fr/pointsApp.php";
+            var url = "http://velo.mfmi-lepuy.fr/pointsApp.php";
 
             var params = {
                 user:$scope.user,
@@ -113,7 +113,7 @@ angular.module('proxivelo.controllers')
             },
             desiredAccuracy: 10,
             stationaryRadius: 10,
-            distanceFilter: 15,
+            distanceFilter: 10,
             notificationTitle: 'Background tracking',
             notificationText: 'ENABLED',
             activityType: 'AutomotiveNavigation',
@@ -127,10 +127,34 @@ angular.module('proxivelo.controllers')
 
     $scope.popup = {};
 
+
+    function getDate() {
+
+        var d = new Date();
+        var jour = d.getDate();
+        var mois = d.getMonth();
+        var annee = d.getFullYear();
+        var heure = d.getHours();
+        var minutes = d.getMinutes();
+        var secondes = d.getSeconds();
+
+        var date = annee + "-" + digit(mois) + "-" + digit(jour) + " " + digit(heure) + ":" + digit(minutes) + ":" + digit(secondes);
+        return date;
+
+    }
+
+    function digit(el) {
+        if (el < 10) {
+            el = "0" + el;
+        }
+        return el;
+    }
+
     $scope.choisir = function () {
         if ($scope.popup.parcours && $scope.popup.velo) {
-        
-            $rootScope.user.parcours = $scope.popup.parcours;
+
+            var date = getDate();
+            $rootScope.user.parcours = $scope.popup.parcours + date;
             $rootScope.user.velo = $scope.popup.velo;
             $scope.modal.hide();
             console.log($scope.user);
