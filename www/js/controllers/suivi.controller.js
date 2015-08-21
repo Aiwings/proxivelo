@@ -15,7 +15,7 @@
                 draggable: false,
                 geodesic: true,
                 visible: true,
-                
+
             };
 
     $scope.parcours = [{
@@ -23,10 +23,10 @@
         name: ""
 
     }];
-    
- 
+
+
     $scope.suiviMarkers = [];
-    $scope.select = {};   
+    $scope.select = {};
 
     $scope.$watch('select.velo', function (newValue, oldValue) {
 
@@ -39,7 +39,7 @@
 
             console.log($scope.user.Id);
             console.log($scope.select.velo);
-            var url = "http://velo.mmi-lepuy.fr/parcoursApp.php";
+            var url = "http://www.publinow.fr/velo/parcoursApp.php";
 
             ajaxService.post(url, params)
                     .then(function (data) {
@@ -51,7 +51,7 @@
                                 value: data[i],
                                 name: data[i]
                             };
-                    
+
                             $scope.parcours.push(parcours);
                         }
                     });
@@ -67,7 +67,7 @@
                 velo: $scope.select.velo,
                 parcours: newValue
             };
-            var url = "http://velo.mmi-lepuy.fr/suiviApp.php";
+            var url = "http://www.publinow.fr/velo/suiviApp.php";
             ajaxService.post(url, params)
                   .then(function (data) {
                       setPath(data);
@@ -95,10 +95,10 @@
         $scope.map.center = points[points.length / 2];
         //mapService.drawPoly($scope.polyline.path)
     }
-   
 
-   
 
-    
+
+
+
 
 });

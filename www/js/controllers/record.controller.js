@@ -9,7 +9,7 @@ angular.module('proxivelo.controllers')
     $scope.polyline =
     {
         id: 1,
-        path: new Array()      
+        path: new Array()
     }
     ;
     $scope.recMarkers = [];
@@ -53,13 +53,13 @@ angular.module('proxivelo.controllers')
 
         var callbackFn = function (location) {
             console.log('[js] BackgroundGeoLocation callback: ' + location.latitudue + ',' + location.longitude);
-            var url = "http://velo.mmi-lepuy.fr/pointsApp.php";
+            var url = "http://www.publinow.fr/velo/pointsApp.php";
 
             var params = {
                 user:$scope.user,
                 location: location
             };
-            
+
             ajaxService.post(url, params)
             .then(function (received) {
 
@@ -78,7 +78,7 @@ angular.module('proxivelo.controllers')
                     mapService.drawPoly($scope.polyline.path);
                     $scope.suiviMarkers.push(mapService.toMark(active, "Actif"));
                     bgGeo.finish();
-                
+
                 }
                 else {
                     var alertPopup = $ionicPopup.alert({
@@ -107,7 +107,7 @@ angular.module('proxivelo.controllers')
 
 
         bgGeo.configure(callbackFn, failureFn, {
-            url: "http://velo.mmi-lepuy.fr/pointsApp.php", //Android
+            url: "http://www.publinow.fr/velo/pointsApp.php", //Android
             params: {
                 user: $scope.user
             },
@@ -171,6 +171,3 @@ angular.module('proxivelo.controllers')
     };
 
 });
-
-
-
