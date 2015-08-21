@@ -11,7 +11,7 @@ angular.module('proxivelo.controllers')
         console.log('Doing login' + $scope.loginData.user + " " + $scope.loginData.pw);
 
 
-        var url = "http://velo.mmi-lepuy.fr/loginApp.php";
+        var url = "http://www.publinow.fr/velo/loginApp.php";
         var loginData = $scope.loginData;
 
 
@@ -42,12 +42,3 @@ angular.module('proxivelo.controllers')
     };
 
 });
-
-
-
-
-
-
-
-
-
