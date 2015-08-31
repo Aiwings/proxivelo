@@ -115,7 +115,7 @@ angular.module('proxivelo.controllers')
             stationaryRadius: 20,
             distanceFilter: 30,
             notificationTitle: 'Background tracking',
-            notificationText: 'DISABLED',
+            notificationText: 'ENABLED',
             activityType: 'AutomotiveNavigation',
             debug: false,
             stopOnTerminate: false
