@@ -52,7 +52,7 @@ angular.module('proxivelo.controllers')
         bgGeo = window.plugins.backgroundGeoLocation;
 
         var callbackFn = function (location) {
-            console.log('[js] BackgroundGeoLocation callback: ' + location.latitudue + ',' + location.longitude);
+            //console.log('[js] BackgroundGeoLocation callback: ' + location.latitudue + ',' + location.longitude);
             var url = "http://www.publinow.fr/velo/pointsApp.php";
 
             var params = {
@@ -112,8 +112,8 @@ angular.module('proxivelo.controllers')
                 user: $scope.user
             },
             desiredAccuracy: 0,
-            stationaryRadius: 10,
-            distanceFilter: 20,
+            stationaryRadius: 20,
+            distanceFilter: 30,
             notificationTitle: 'Background tracking',
             notificationText: 'DISABLED',
             activityType: 'AutomotiveNavigation',
