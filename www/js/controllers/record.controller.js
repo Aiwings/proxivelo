@@ -112,8 +112,8 @@ angular.module('proxivelo.controllers')
                 user: $scope.user
             },
             desiredAccuracy: 0,
-            stationaryRadius: 20,
-            distanceFilter: 30,
+            stationaryRadius: 10,
+            distanceFilter: 20,
             notificationTitle: 'Background tracking',
             notificationText: 'ENABLED',
             activityType: 'AutomotiveNavigation',
