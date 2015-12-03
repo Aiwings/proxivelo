@@ -24,7 +24,7 @@ angular.module('proxivelo.services',[])
 			}).catch(function(e)
 			{
 			    console.log(e);
-			    alert(e);
+			    alert(e.message);
 			    throw e;
                 
 			});
@@ -46,6 +46,7 @@ angular.module('proxivelo.services',[])
 			}).catch(function(e)
 			{
 			    console.log(e);
+				alert(e.message);
 			    throw e;
 			});
 		return request;
