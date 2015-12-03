@@ -2,12 +2,15 @@ angular.module('proxivelo.services',[])
 
 .factory('ajaxService',function($http){		
 
+
+
+
 	var ajaxService = {
 		
 		
 		post : function (url,data) {		
 			
-			console.log("POST "+url+" "+data);
+			console.log("POST "+url+" "+ JSON.stringify(data));
 			 var method = 'POST';
 			 var request = $http({
 				    method: method,
@@ -23,8 +26,9 @@ angular.module('proxivelo.services',[])
 				        
 			}).catch(function(e)
 			{
-			    console.log(e);
-			    alert(e.message);
+			    console.log(JSON.stringify(e));
+			    alert(JSON.stringify(e));
+			    
 			    throw e;
                 
 			});
@@ -45,8 +49,9 @@ angular.module('proxivelo.services',[])
 				        
 			}).catch(function(e)
 			{
-			    console.log(e);
-				alert(e.message);
+			    console.log(JSON.stringify(e));
+			    alert(JSON.stringify(e));
+				
 			    throw e;
 			});
 		return request;
