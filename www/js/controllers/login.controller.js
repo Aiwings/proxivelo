@@ -8,14 +8,14 @@ angular.module('proxivelo.controllers')
 
     // Perform the login action when the user submits the login form
     $scope.doLogin = function () {
-        console.log('Doing login' + $scope.loginData.user + " " + $scope.loginData.pw);
+        console.log('Doing login ' + $scope.loginData.user + " " + $scope.loginData.pw);
+
+		
+        var url = "http://proxivelopro.fr/velo/loginApp.php";
+       
 
 
-        var url = "http://www.proxivelopro.fr/velo/loginApp.php";
-        var loginData = $scope.loginData;
-
-
-        ajaxService.post(url, loginData)
+        ajaxService.post(url, $scope.loginData)
             .then(function (received) {
 
                 console.log(received);

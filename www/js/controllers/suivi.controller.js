@@ -39,7 +39,7 @@
 
             console.log($scope.user.Id);
             console.log($scope.select.velo);
-            var url = "http://www.proxivelopro.fr/velo/parcoursApp.php";
+            var url = "http://proxivelopro.fr/velo/parcoursApp.php";
 
             ajaxService.post(url, params)
                     .then(function (data) {
@@ -67,7 +67,7 @@
                 velo: $scope.select.velo,
                 parcours: newValue
             };
-            var url = "http://www.proxivelopro.fr/velo/suiviApp.php";
+            var url = "http://proxivelopro.fr/velo/suiviApp.php";
             ajaxService.post(url, params)
                   .then(function (data) {
                       setPath(data);
