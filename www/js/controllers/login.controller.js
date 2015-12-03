@@ -10,11 +10,10 @@ angular.module('proxivelo.controllers')
     $scope.doLogin = function () {
         console.log('Doing login ' + $scope.loginData.user + " " + $scope.loginData.pw);
 
+
 		
         var url = "http://proxivelopro.fr/velo/loginApp.php";
        
-
-
         ajaxService.post(url, $scope.loginData)
             .then(function (received) {
 
