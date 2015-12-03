@@ -53,7 +53,7 @@ angular.module('proxivelo.controllers')
 
         var callbackFn = function (location) {
             //console.log('[js] BackgroundGeoLocation callback: ' + location.latitudue + ',' + location.longitude);
-            var url = "http://www.publinow.fr/velo/pointsApp.php";
+            var url = "http://www.proxivelopro.fr/velo/pointsApp.php";
 
             var params = {
                 user:$scope.user,
@@ -107,7 +107,7 @@ angular.module('proxivelo.controllers')
 
 
         bgGeo.configure(callbackFn, failureFn, {
-            url: "http://www.publinow.fr/velo/pointsApp.php", //Android
+            url: "http://www.proxivelopro.fr/velo/pointsApp.php", //Android
             params: {
                 user: $scope.user
             },
