@@ -132,7 +132,7 @@ angular.module('proxivelo.controllers')
 
         var d = new Date();
         var jour = d.getDate();
-        var mois = d.getMonth();
+        var mois = d.getMonth()+1;
         var annee = d.getFullYear();
         var heure = d.getHours();
         var minutes = d.getMinutes();
